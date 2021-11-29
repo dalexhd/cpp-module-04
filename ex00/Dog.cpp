@@ -6,16 +6,21 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 12:57:38 by aborboll          #+#    #+#             */
-/*   Updated: 2021/11/29 12:59:41 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/11/29 16:43:17 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-//Clap constructors & destructors
+void	Dog::makeSound(void) const
+{
+	std::cout << "Guauuu 🐶" << std::endl;
+}
+
 Dog::Dog(void)
 {
 	std::cout << "Dog default constructor called" << std::endl;
+	this->setType("Dog");
 }
 
 Dog::~Dog()

@@ -21,7 +21,7 @@ COUNTER				= 	0
 COLUMNS				=	$(shell stty size | cut -d" " -f2)
 
 # Mandatory part
-SRCS				=	main.cpp Animal.cpp Cat.cpp Dog.cpp
+SRCS				=	main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 SOURCES				=	$(SRCS)
 
 # Mandatory Objects

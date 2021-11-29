@@ -6,7 +6,7 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:29:54 by aborboll          #+#    #+#             */
-/*   Updated: 2021/11/29 13:02:34 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/11/29 15:21:38 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,13 @@
 	#define ANIMAL_H
 	class Animal
 	{
-		private:
+		protected:
 			std::string	type;
 		public:
+			void				setType(std::string type);
+			std::string const	&getType(void) const;
+			virtual void		makeSound(void) const;
 			Animal(void);
-			~Animal();
+			virtual ~Animal();
 	};
 #endif

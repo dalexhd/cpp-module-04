@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 12:56:26 by aborboll          #+#    #+#             */
-/*   Updated: 2021/11/29 15:07:04 by aborboll         ###   ########.fr       */
+/*   Created: 2021/11/29 16:29:29 by aborboll          #+#    #+#             */
+/*   Updated: 2021/11/29 16:32:12 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class Cat: public Animal
+class WrongCat: public WrongAnimal
 {
 	public:
 		void	makeSound(void) const;
-		Cat(void);
-		~Cat();
+		WrongCat(void);
+		~WrongCat();
 };
