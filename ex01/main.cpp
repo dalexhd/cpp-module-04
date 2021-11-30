@@ -6,7 +6,7 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:28:58 by aborboll          #+#    #+#             */
-/*   Updated: 2021/11/30 19:19:08 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/11/30 20:15:26 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 int main(void)
 {
 	////////////////////////////////
-	// First part (Array + brain) //
+	// First part (Normal + brain) //
 	////////////////////////////////
 	std::cout << "-----------------------------" << std::endl <<
 		"First part (Normal + Brain)" << std::endl << "-----------------------------" << std::endl;
@@ -48,11 +48,24 @@ int main(void)
 	///////////////////////////////
 	// Third part (Copy + brain) //
 	///////////////////////////////
+	std::cout << "-----------------------------" << std::endl <<
+		"Third part (Copy + brain (by mrosario xd))" << std::endl << "-----------------------------" << std::endl;
+	const Animal * dog2 = new Dog();
+	const Animal * dog1 = new Dog(*(static_cast<Dog const *>(dog2)));
+
+	delete dog2;
+	delete dog1;
+
+	//////////////////////////////////////////
+	// Third part (Copy + brain (by me xd)) //
+	//////////////////////////////////////////
 	Dog	dog;
 	Cat	cat;
 
 	Dog dogReplica(dog);
-	dog.setType("Alert!!! this is a dog type change.");
 	Cat catReplica(cat);
+	dog.setType("Alert!!! this is a dog type change.");
+	std::cout << "The type of dog is:\t\t" << dog.getType() << std::endl;
+	std::cout << "The type of dogReplica is:\t" << dogReplica.getType() << std::endl;
 	return (0);
 }

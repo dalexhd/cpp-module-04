@@ -6,7 +6,7 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 12:57:38 by aborboll          #+#    #+#             */
-/*   Updated: 2021/11/30 19:13:25 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/11/30 20:11:46 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ Dog::Dog(void): brain(new Brain)
 	this->setType("Dog");
 }
 
-Dog::Dog(const Dog &dog) : brain(new Brain)
+Dog::Dog(const Dog &dog)
 {
-	(void)dog;
+	this->brain = new Brain(*(dog.brain));
 	std::cout << "[🐶] Copy constructor called." << std::endl;
 	this->setType("Dog");
 }
