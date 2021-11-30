@@ -6,7 +6,7 @@
 /*   By: aborboll <aborboll@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 16:28:58 by aborboll          #+#    #+#             */
-/*   Updated: 2021/11/29 19:10:36 by aborboll         ###   ########.fr       */
+/*   Updated: 2021/11/30 19:19:08 by aborboll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main(void)
 	/////////////////////////////////
 	std::cout << "-----------------------------" << std::endl <<
 		"Second part (Array + brain)" << std::endl << "-----------------------------" << std::endl;
-	const Animal* animal[100];
+	const Animal* animal[MAX_ANIMALS];
 
 	for (size_t i = 0; i < MAX_ANIMALS; i++)
 	{
@@ -53,7 +53,6 @@ int main(void)
 
 	Dog dogReplica(dog);
 	dog.setType("Alert!!! this is a dog type change.");
-	std::cout << dogReplica.getType() << std::endl;
 	Cat catReplica(cat);
 	return (0);
 }
