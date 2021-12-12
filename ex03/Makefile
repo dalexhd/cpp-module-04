@@ -1,6 +1,6 @@
 OUTPUT				=	interface
 
-CC					=	@clang++
+CC					=	@clang++ -std=c++98
 SH					=	@bash
 RM					=	@/bin/rm -rf
 FLAGS				=	-Wextra -Wall -Werror -g -fsanitize=address
@@ -21,7 +21,7 @@ COUNTER				= 	0
 COLUMNS				=	$(shell stty size | cut -d" " -f2)
 
 # Mandatory part
-SRCS				=	main.cpp
+SRCS				=	main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 SOURCES				=	$(SRCS)
 
 # Mandatory Objects
